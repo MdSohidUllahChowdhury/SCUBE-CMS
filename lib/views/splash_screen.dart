@@ -18,8 +18,8 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   splashscreen() async {
-    await Future.delayed(const Duration(seconds: 2), () {});
-    Get.offAll(() => const LoginScreen(),transition:Transition.downToUp);
+    await Future.delayed(const Duration(seconds:2 ), () {});
+    Get.offAll(() => const LoginScreen(), transition: Transition.downToUp);
   }
 
   @override

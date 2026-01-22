@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scube_cms/widgets/login_form_section.dart';
 import 'package:scube_cms/widgets/title_sub_title_style.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -34,9 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   topRight: Radius.circular(26),
                 ),
               ),
-              child: Column(
-                
-              ),
+              child: loginSection(),
             ),
           ),
         ],
