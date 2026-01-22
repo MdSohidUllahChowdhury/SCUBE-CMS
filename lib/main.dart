@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:scube_cms/view/login_screen.dart';
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:scube_cms/views/splash_screen.dart';
 
 void main() {
   runApp(
-    MaterialApp(
-      home: const LoginScreen(),
+    GetMaterialApp(
+      home: SplashScreen(),
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(useMaterial3: true),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        fontFamily: GoogleFonts.inter().fontFamily,
+        useMaterial3: true,
+      ),
     ),
   );
 }
