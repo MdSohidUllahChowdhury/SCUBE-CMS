@@ -91,7 +91,7 @@ Widget loginSection() {
         const SizedBox(height: 8),
         ElevatedButton(
           onPressed: () {
-            Get.to(() => const FirstPage());
+            Get.to(() => const SolarPowerDashboard());
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xFF0096FC),
