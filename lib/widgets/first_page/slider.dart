@@ -19,6 +19,7 @@ class AutoRotatingImageCarousel extends StatefulWidget {
 
 class _AutoRotatingImageCarouselState extends State<AutoRotatingImageCarousel> {
   late PageController _pageController;
+  // ignore: unused_field
   int _currentPage = 0;
   late Stream<int> _pageStream;
   late StreamSubscription<int> _pageStreamSubscription;

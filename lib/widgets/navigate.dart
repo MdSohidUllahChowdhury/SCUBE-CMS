@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:scube_cms/views/second_page.dart';
 
 Widget navigatepagege(String title,void Function()? pageName) {
   return Padding(
