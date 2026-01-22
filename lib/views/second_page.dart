@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:scube_cms/views/second_page.dart';
-import 'package:scube_cms/widgets/first_page/data_table.dart';
-import 'package:scube_cms/widgets/first_page/info_card.dart';
-import 'package:scube_cms/widgets/first_page/pv_module.dart';
-import 'package:scube_cms/widgets/first_page/slider.dart';
-import 'package:scube_cms/widgets/first_page/status.dart';
-import 'package:scube_cms/widgets/first_page/status_two.dart';
+import 'package:scube_cms/views/first_page.dart';
+import 'package:scube_cms/views/splash_screen.dart';
 import 'package:scube_cms/widgets/navigate.dart';
+import 'package:scube_cms/widgets/second_page/grid_action.dart';
+import 'package:scube_cms/widgets/second_page/source_load.dart';
+import 'package:scube_cms/widgets/second_page/tab_section.dart';
 
-// Main Dashboard Screen
-class SolarPowerDashboard extends StatelessWidget {
-  const SolarPowerDashboard({super.key});
+class SecondPage extends StatelessWidget {
+  const SecondPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +19,10 @@ class SolarPowerDashboard extends StatelessWidget {
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () => Navigator.pop(context),
+          onPressed: () => Get.to(() => SplashScreen()),
         ),
         title: const Text(
-          '1st Page',
+          '2nd Page',
           style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.w600,
@@ -63,25 +60,16 @@ class SolarPowerDashboard extends StatelessWidget {
         child: Column(
           children: [
             navigatepagege(
-              '2nd Page Navigate',
-              () => Get.to(() => SecondPage()),
+              '1st Page Navigate',
+              () => Get.to(() => SolarPowerDashboard()),
             ),
-            const SizedBox(height: 10),
-            customStatusCard(context),
             const SizedBox(height: 16),
+            TabSection(),
             const SizedBox(height: 16),
-            WeatherSliderPage(),
+            CustomSourceLoadToggle(),
             const SizedBox(height: 16),
-            customDataTable(context),
-            const SizedBox(height: 16),
-            modulePV(context),
-            const SizedBox(height: 16),
-            customStatusCardTwo(context),
-            const SizedBox(height: 16),
-            InfoCard(title: 'LT_01'),
-            const SizedBox(height: 16),
-            InfoCard(title: 'LT_01'),
-            const SizedBox(height: 16),
+            ActionButtonsGrid(),
+            const SizedBox(height: 20),
           ],
         ),
       ),

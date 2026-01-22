@@ -44,7 +44,7 @@ class InfoCard extends StatelessWidget {
                       '495.505 kWp / 440 kW',
                       style: TextStyle(
                         fontSize: 13,
-                        color: Colors.cyan,
+                        color: Color(0xff0684D9),
                         fontWeight: FontWeight.w600,
                       ),
                     ),

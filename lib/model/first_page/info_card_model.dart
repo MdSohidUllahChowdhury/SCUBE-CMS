@@ -24,7 +24,7 @@ class InverterDataItem extends StatelessWidget {
             children: [
               Text(
                 label,
-                style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+                style: TextStyle(fontSize: 11, color: Colors.black54),
               ),
               const SizedBox(height: 2),
               Text(

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:scube_cms/views/first_page.dart';
+import 'package:scube_cms/views/second_page.dart';
 
-Widget navigatepagege() {
+Widget navigatepagege(String title,void Function()? pageName) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
     child: InkWell(
-      onTap: () => Get.to(() => const SolarPowerDashboard()),
+      onTap: pageName,
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 16),
         decoration: BoxDecoration(
@@ -19,7 +19,7 @@ Widget navigatepagege() {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '2nd Page Navigate',
+              title,
               style: const TextStyle(
                 color: Colors.white,
                 fontSize: 16,
